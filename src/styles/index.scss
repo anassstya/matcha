@@ -1,0 +1,482 @@
+@use './variables' as var;
+
+body{
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+}
+
+html{
+  font-size: 16px;
+}
+
+.header{
+  background: url("../../public/assets/header_bcg.png") no-repeat center/cover;
+  background-color: var.$milk !important;
+  font-family: "Cossette_Titre", sans-serif ;
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+
+  &__item{
+    width: 15rem;
+
+    &:hover{
+      border: 3px solid var.$pink !important;
+      color: var.$green !important;
+      font-weight: 600;
+    }
+  }
+
+
+  &__text{
+    color: var.$light_pink !important;
+    font-size: 1.2rem !important;
+    font-family: "Bulbasaur", sans-serif ;
+  }
+
+  &__name{
+    width: 500px;
+  }
+
+  &__basket{
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+
+    position: absolute;
+    top: 50px;
+    right: 50px;
+  }
+
+}
+
+.products{
+  background: var.$milk !important;
+
+  &__btns{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+  }
+
+  &__btn {
+    border: var.$pink 2px solid !important;
+    padding: 0.5rem 1.5rem !important;
+
+    &:hover{
+      background: url("../../public/assets/btn_bcg.png") no-repeat top/cover !important;
+      border: var.$green 2px solid !important;
+
+    }
+  }
+
+  &__items{
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+  }
+
+  &__item{
+    width: 90% !important;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 1rem 0;
+  }
+
+  &__body{
+    flex-grow: 1;
+  }
+
+  &__img{
+    object-fit: contain;
+    height: 180px;
+  }
+
+  &__title{
+    font-family: "Bulbasaur", sans-serif;
+    font-size: 1rem !important;
+    color: var.$pink !important;
+  }
+
+  &__text{
+    font-family: "Cossette_Titre", sans-serif;
+    font-size: 1rem !important;
+    color: #000;
+  }
+
+  &__price{
+    font-family: "Cossette_Titre", sans-serif;
+    font-size: 1rem !important;
+    color: #000;
+  }
+
+  &__prc{
+    font-family: "Bulbasaur", sans-serif;
+    color: var.$green;
+  }
+}
+
+.modal-itm{
+  font-family: 'Cossette_Titre', sans-serif !important;
+
+  &__body{
+    background-color: var.$light_pink;
+    color: var.$pink;
+    font-weight: bold !important;
+    position: relative;
+  }
+
+  &__title{
+    font-family: 'Bulbasaur', sans-serif !important;
+  }
+
+  &__img{
+    height: 30rem !important;
+    border-radius: 40px;
+  }
+
+  &__span{
+    font-weight: bold !important;
+    color: var.$green
+  }
+
+  &__addToBasket{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 20px;
+    right: 80px;
+    border: 2px solid var.$pink;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    background-color: var.$milk;
+
+    &:hover{
+      background-color: var.$light_pink;
+    }
+  }
+}
+
+
+.about{
+  background-color: var.$light_pink;
+  padding: 4rem 5%;
+
+  &__img{
+    height: 60vh;
+    border-radius: 30px;
+    width: 100%;
+    object-fit: cover;
+
+  }
+
+  &__content{
+    font-family: "Cossette_Titre", sans-serif;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+  }
+
+  &__title{
+    color: var.$green;
+    font-weight: 600;
+  }
+
+  &__stats{
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    gap: 8rem;
+    padding: 3rem 0;
+  }
+
+  &__num{
+    font-family: 'Bulbasaur', sans-serif;
+    color: var.$pink;
+    font-size: 1.75rem;
+  }
+}
+
+
+.contacts{
+  background-color: var.$milk;
+  padding: 3rem 5%;
+
+  &__row{
+    display: flex;
+    align-items: flex-start;
+    gap: 3rem;
+  }
+
+  &__content {
+    max-width: 1100px;
+    margin: 0 auto;
+    background: var.$light_pink;
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  }
+
+  form {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 15px;
+    border: 1px solid var.$milk;
+    }
+
+  &__label{
+    font-weight: 700;
+    color: var.$green;
+  }
+
+  &__control{
+    border-radius: 10px;
+    border: 1px solid var.$light_brown !important;
+
+    &:focus {
+      border-color: var.$pink !important;
+      box-shadow: 0 0 0 0.2rem rgba(var.$pink, 0.3) !important;
+    }
+  }
+
+  &__btn{
+    &:hover{
+      background-color: var.$pink !important;
+      color: var.$milk !important;
+    }
+  }
+
+  &__heading{
+    color: var.$green;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+  }
+
+  &__text{
+    margin-bottom: 0.5rem;
+    color: var.$green;
+
+    strong{
+      color: var.$pink;
+    }
+  }
+}
+
+
+.footer {
+  background: var.$green;
+  color: var.$milk;
+  font-family: 'Cossette_Titre', sans-serif;
+  padding: 3rem 5%;
+
+  &__name{
+    color: var.$light_pink;
+    font-weight: 700;
+    font-family: 'Bulbasaur', sans-serif;
+  }
+
+  &__heading {
+    color: var.$pink;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    margin: 0.3rem 0;
+    color: var.$milk;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      margin-bottom: 0.4rem;
+
+      a {
+        color: var.$milk;
+        text-decoration: none;
+        transition: color 0.2s ease;
+
+        &:hover {
+          color: var.$light_pink;
+        }
+      }
+    }
+  }
+
+  &__logo {
+    margin-bottom: 1.5rem;
+  }
+
+  &__links {
+    margin-bottom: 1.5rem;
+  }
+
+  &__contacts {
+    margin-bottom: 1.5rem;
+  }
+
+  &__bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: center;
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    font-size: 0.9rem;
+    color: var.$milk;
+  }
+}
+
+
+@media (max-width: 992px) {
+  html{
+    font-size: 14px;
+  }
+
+  .header {
+    padding: 1rem 0.5rem 8rem;
+
+    &__item {
+      font-size: 1.2rem !important;
+    }
+
+    &__text {
+      font-size: 0.9em !important;
+    }
+
+    &__basket {
+      width: 40px;
+      height: 40px;
+      top: 40px;
+      right: 40px;
+    }
+  }
+
+  .products{
+    &__item{
+      width: 90% !important;
+    }
+  }
+}
+
+
+@media (max-width: 768px) {
+  html{
+    font-size: 12px;
+  }
+
+  .header {
+    height: 80vh;
+    padding: 1rem 0.5rem 6rem;
+
+    &__item {
+      font-size: 0.9rem !important;
+    }
+  }
+
+  .modal-itm .modal-dialog {
+    max-width: 40rem !important;
+    margin: auto;
+  }
+  .modal-itm{
+    &__addToBasket{
+      width: 20px;
+      height: 20px;
+      top: 12px;
+      right: 100px;
+      padding: 10px;
+      box-sizing: content-box;
+
+    }
+  }
+
+  .about {
+    &__content {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    &__img {
+      height: 35vh;
+    }
+
+    &__stats {
+      justify-content: center;
+      gap: 2rem;
+    }
+  }
+
+  .contacts {
+    &__row {
+      flex-direction: column;
+      gap: 0;
+    }
+
+    form {
+      margin-bottom: 2rem;
+    }
+
+    &__heading{
+      margin: 0;
+    }
+
+  }
+
+  .footer__logo{
+    text-align: center;
+  }
+
+
+}
+
+
+@media (max-width: 480px) {
+  html{
+    font-size: 10px;
+  }
+
+  .header {
+    height: 70vh;
+    padding: 1rem 0.5rem 7rem;
+    &__item {
+      font-size: 0.85rem;
+    }
+
+    &__text {
+      font-size: 0.9rem;
+    }
+
+    &__basket {
+      width: 30px;
+      height: 30px;
+    }
+  }
+
+  .products{
+    &__item{
+      width: 60% !important;
+    }
+  }
+
+  .modal-itm .modal-dialog {
+    max-width: 28rem !important;
+    margin: auto;
+  }
+  .modal-itm{
+    &__addToBasket{
+      width: 17px;
+      height: 17px;
+      top: 5px;
+      right: 30px;
+    }
+  }
+}
